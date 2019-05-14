@@ -9,7 +9,8 @@ public:
   CustomItem(std::string size);
   virtual ~CustomItem();
   void addTopping(std::string topping);
-  std::string composeItem(&CustomItem);
+  virtual double getPrice();
+  virtual std::string composeItem();
 private:
-
+  map<std::string, int> table;
 };
