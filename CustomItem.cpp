@@ -1,5 +1,5 @@
 #include <iostream>
-#include <stirng>
+#include <string>
 #include "CustomItem.h"
 
 CustomItem::CustomItem(std::string size){
@@ -26,7 +26,7 @@ std::string CustomItem::composeItem(){
   std::string item;
   item += "Custom Size: " + this->size + "\n";
   item += "Toppings:" + "\n";
-  for (std::map<string, int>::iterator it = table.begin(); it != table.end(); it++){
+  for (std::map<std::string, int>::iterator it = table.begin(); it != table.end(); it++){
     item += it->first + ": " + it->second + " oz\n"
   }
   return item;

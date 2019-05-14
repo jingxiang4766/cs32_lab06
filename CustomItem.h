@@ -14,3 +14,5 @@ public:
 private:
   std::map<std::string, int> table;
 };
+
+#endif
