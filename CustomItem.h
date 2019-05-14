@@ -12,5 +12,5 @@ public:
   virtual double getPrice();
   virtual std::string composeItem();
 private:
-  map<std::string, int> table;
+  std::map<std::string, int> table;
 };
