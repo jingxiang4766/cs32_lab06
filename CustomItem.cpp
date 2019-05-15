@@ -14,7 +14,7 @@ CustomItem::~CustomItem(){
 
 void CustomItem::addTopping(std::string topping){
   this->price += 0.4;
-  this->table["topping"]++;
+  this->table[topping]++;
 }
 
 double CustomItem::getPrice(){
@@ -24,7 +24,7 @@ double CustomItem::getPrice(){
 std::string CustomItem::composeItem(){
   std::string item;
   item += "Custom Size: ";
-  item +=  this->size;
+  item +=  this->getPrice();
   item +=  "\n";
   item += "Toppings:";
   item +=  "\n";
@@ -35,7 +35,7 @@ std::string CustomItem::composeItem(){
     item +=  " oz\n";
   }
   item += "Price: $";
-  item += this->price;
+  item += this->getPrice();
   item += "\n";
   
   return item;
