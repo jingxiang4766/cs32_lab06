@@ -1,5 +1,9 @@
+//Jing Su, 6839039
+
 #include <iostream>
 #include <string>
+#include <iomanip>
+#include <sstream>
 #include "PreMadeItem.h"
 
 PreMadeItem::PreMadeItem(std::string name, std::string size):IceCreamItem(size){
@@ -14,6 +18,8 @@ PreMadeItem::~PreMadeItem(){
 }
 
 std::string PreMadeItem::composeItem(){
+	std::stringstream stream;
+  stream << std::fixed << std::setprecision(2) << this->getPrice();
   std::string item;
   item += "Pre-made Size: ";
   item +=  this->size;
@@ -22,7 +28,7 @@ std::string PreMadeItem::composeItem(){
   item += this->name;
   item += "\n";
   item += "Price: $";
-  item += this->price;
+  item += stream.str();
   item += "\n";
   return item;
 }

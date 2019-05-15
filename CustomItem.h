@@ -1,3 +1,5 @@
+//Jing Su, 6839039
+
 #ifndef CUSTOMITEM_H
 #define CUSTOMITEM_H
 

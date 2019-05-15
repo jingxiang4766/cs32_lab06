@@ -1,3 +1,5 @@
+//Jing Su, 6839039
+
 #ifndef PREMADEITEM_H
 #define PREMADEITEM_H
 
