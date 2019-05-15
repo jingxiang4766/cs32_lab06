@@ -2,11 +2,10 @@
 #include <string>
 #include "CustomItem.h"
 
-CustomItem::CustomItem(std::string size){
-  this->size = size;
-  if (size == "small") price = 3;
-  else if (size == "medium") price = 5;
-  else price = 6.5;
+CustomItem::CustomItem(std::string size):IceCreamItem(size){
+  if (size == "small") this->price = 3;
+  else if (size == "medium") this->price = 5;
+  else this->price = 6.5;
 }
 
 CustomItem::~CustomItem(){
@@ -24,10 +23,20 @@ double CustomItem::getPrice(){
 
 std::string CustomItem::composeItem(){
   std::string item;
-  item += "Custom Size: " + this->size + "\n";
-  item += "Toppings:" + "\n";
+  item += "Custom Size: ";
+  item +=  this->size;
+  item +=  "\n";
+  item += "Toppings:";
+  item +=  "\n";
   for (std::map<std::string, int>::iterator it = table.begin(); it != table.end(); it++){
-    item += it->first + ": " + it->second + " oz\n"
+    item += it->first;
+    item +=  ": ";
+    item +=  it->second;
+    item +=  " oz\n";
   }
+  item += "Price: $";
+  item += this->price;
+  item += "\n";
+  
   return item;
 }

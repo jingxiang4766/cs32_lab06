@@ -2,6 +2,7 @@
 #define PREMADEITEM_H
 
 #include <string>
+#include "IceCreamItem.h"
 
 class PreMadeItem : public IceCreamItem{
 public:

@@ -3,6 +3,7 @@
 
 #include <string>
 #include <map>
+#include "IceCreamItem.h"
 
 class CustomItem : public IceCreamItem{
 public:
